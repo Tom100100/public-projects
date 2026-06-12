@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Invitation Letter</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="closeElem closedLid"></div>
+      <div class="closeElem openedLid"></div>
+      <div class="envelope"></div>
+      <div class="letter" id="flip-letter">
+        <div class="letter-front">
+          <p>Can i steal you for a dinner date?💖<br><br>
+             - Swipe -</p>
+        </div>
+        <div class="letter-back">
+          <p>You bring the smile, <br>I'll bring the Pizza🍕<br><br> your Woofy</p>
+        </div>
+      </div>
+    </div>
+    <script>
+  const letter = document.getElementById('flip-letter');
+  let touchstartX = 0;
+  let touchendX = 0;
+
+  letter.addEventListener('touchstart', e => {
+    touchstartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  letter.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX;
+    handleGesture();
+  }, { passive: true });
+
+  function handleGesture() {
+    // Detects if the horizontal swipe distance is greater than 40 pixels
+    if (Math.abs(touchendX - touchstartX) > 40) {
+      letter.classList.toggle('flipped');
+    }
+  }
+</script>
+  </body>
+    
+  </body>
+  
+</html>
