@@ -51,14 +51,14 @@ body {
 /* Scaled up font-size slightly for the bigger card */
 .letter-front p {
   text-align: center;
-  font-size: 24px;
+  font-size: 34px;
   margin-top: 10px;
   font-family: Bradley Hand, cursive;
 }
 
 .letter-back p {
   text-align: center;
-  font-size: 24px;
+  font-size: 34px;
   margin-top: 0px;
   font-family: Bradley Hand, cursive;
 }
